@@ -1,0 +1,31 @@
+<h2>Form</h2>
+<div>
+  <p class="error">
+    {{ error }}
+  </p>
+  <p>
+    {{ literal }}
+  </p>
+  <div>
+    <label>Tekst:</label>
+    <input type="text" [(ngModel)]="tekst" change="update()" />
+  </div>
+  <div>
+    <label>Ja/Nee:</label>
+    <input type="checkbox" [(ngModel)]="janee" change="update()" />
+  </div>
+  <div>
+    <label>Datum:</label>
+    <input type="date" [(ngModel)]="datum" change="update()" />
+    <input type="time" [(ngModel)]="tijd" change="update()" />
+  </div>
+  <button (click)="submit()">Send</button>
+  <button (click)="reset()">Reset</button>
+</div>
+<div>
+  {{ formData }}
+</div>
+
+<button mat-raised-button (click)="localError()">Local front end error</button>
+<button mat-raised-button (click)="failingRequest()">Server request with error</button>
+<button mat-raised-button (click)="successfulRequest()">Successful request showing loading spinner</button>
