@@ -6,7 +6,7 @@ import { ProductListComponent } from './product-list.component';
 @NgModule({
   imports: [
     FormsModule,
-    RouterModule.forRoot([{ path: '/', component: ProductListComponent }]),
+    RouterModule.forRoot([{ path: 'product-list', component: ProductListComponent }]),
   ],
   declarations: [ProductListComponent],
 })

@@ -2,6 +2,7 @@ import { HttpErrorResponse } from "@angular/common/http";
 import { ErrorHandler, Injectable, NgZone } from "@angular/core";
 import { ErrorDialogService } from "src/app/shared/errors/error-dialog.service";
 
+//Source: https://github.com/PKief/angular-global-error-handling/blob/main/angular.json
 @Injectable()
 export class GlobalErrorHandler implements ErrorHandler {
   constructor(
